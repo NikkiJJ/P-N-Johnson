@@ -1,6 +1,8 @@
+
 .nav-sig {
   font-size: 50px;
   font-family: "Mr Dafoe";
+  color: #59B4C3;
 }
 
 nav.navbar {
@@ -20,6 +22,22 @@ nav.navbar {
   padding-bottom: 20px;
 }
 
+.more-link {
+  text-decoration: none;
+  background-color: #59B4C3;
+  color: #F8F6E3;
+  font-weight: bold;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+}
+
+.current-page {
+  position: relative;
+  padding-bottom: 3px; /* Adjusts the space between the text and the underline */
+  border-bottom: 2px solid #59B4C3 ; /* Creates the underline. Adjust the color and thickness as needed */
+  text-decoration: none; /* Removes the default text underline if it's an <a> tag */
+
+}
 .heading {
   padding: 10px;
   font-weight: 200;

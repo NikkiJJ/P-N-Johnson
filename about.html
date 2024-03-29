@@ -16,7 +16,7 @@
     <div class="page-content">
         <h3 class="heading">ABOUT THE AUTHOR - P N JOHNSON - FAST PACED THRILLERS – <em>“The perfect Summer read!”</em></h3>
         <div class="about-container">
-          <img src="images/phil.jpg" alt="pnjohnson" style="width: 700px; height: 450px; border-radius: 5px; box-shadow: 0px 0px 10px 9px rgba(147, 147, 147, 0.2);">
+          <img src="images/phil.jpg" alt="pnjohnson" class="book-image" style="width: 700px; height: 450px; border-radius: 5px; box-shadow: 0px 0px 10px 9px rgba(147, 147, 147, 0.2);">
           <p class="about-phil">
             After a long and successful career in television journalism with the BBC and ITV, Phil Johnson now writes fast-moving thrillers.
             As a newsreader, reporter and producer, he covered national and regional news stories. These included tracking down criminals to Spain, going on high-octane police chases and interviewing pop stars, politicians and celebrities.
@@ -27,15 +27,29 @@
         <p>Published by Burning Chair Publishing, <em>London - burningchairpublishing.com</em></p>
     </div>
 
-<script>
-  // Fetch and insert navbar using JavaScript
-  fetch('navbar.html')
-      .then(response => response.text())
-      .then(html => {
-          document.getElementById('navbar').innerHTML = html;
-      })
-      .catch(error => console.error('Error fetching navbar:', error));
-</script>
+    <script>
+      // Existing script to fetch and insert the navbar
+      fetch('navbar.html')
+          .then(response => response.text())
+          .then(html => {
+              document.getElementById('navbar').innerHTML = html;
+              highlightCurrentPage(); // Call the function to highlight the navbar link here
+          })
+          .catch(error => console.error('Error fetching navbar:', error));
+
+      // Function to add 'current-page' class to the current page's navbar link
+      function highlightCurrentPage() {
+          const navLinks = document.querySelectorAll('#navbar a'); // Adjust the selector if needed
+          const currentUrl = window.location.pathname; // Gets the path, e.g., '/about.html'
+
+          navLinks.forEach(link => {
+              if (link.getAttribute('href') === currentUrl || link.href === window.location.href) {
+                  link.classList.add('current-page');
+              }
+          });
+      }
+      </script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

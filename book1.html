@@ -3,28 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>LITTLE BLUE BOAT</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mr+Dafoe&display=swap" rel="stylesheet">
-    <!-- Additional CSS or meta tags -->
+    <!-- Link to your CSS stylesheet if needed -->
+    <!-- Additional meta tags, stylesheets, and scripts -->
 </head>
 <body>
   <div id="navbar"></div>
+  <div class="page-content">
+    <h3 class="heading" id="typewriter-heading">LITTLE BLUE BOAT</h3>
+    <div class="about-container">
+      <img src="images/little-blue.jpg" alt="little blue boat" class="book-image" style="width: 700px; height: 450px; border-radius: 5px; box-shadow: 0px 0px 10px 9px rgba(147, 147, 147, 0.2);">
+      <p class="about-phil">
+        Live music is in her blood, but as the death threats arrive, she fears there’s a killer in the crowd.
 
+        Cath Edgley is a normal schoolteacher at a normal high school… until she hears the shocking news that fading rock star Raven Rain has been murdered.
+
+        Because, to Cath, Raven Rain is more than just a picture on a magazine – he was also the ex-lover of her missing mother, Betzy Blac, lead singer of ’80s punk girl band, Décolleté. A woman who went missing over 30 years ago.
+
+        Warned by a string of mystery text messages to “trust no one”, Cath is inspired to solve the mystery of her mum’s disappearance, once and for all.
+
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+      </p>
+    </div>
+    <div class="separator"></div>
+      <h2 class="heading">Reviews for Killer In The Crowd</h2>
+        <div class="review-card">
+          <p class="review-text"><em>Utterly compelling. From page to page, the mystery grows ever-deeper. Packed with characters intricately defined. And an ending that comes like a bolt from the blue. Mystery in the music world!</em></p>
+          <p><strong>Steve Harley (Cockney Rebel) - singer, songwriter
+          </strong></p>
+        </div>
+        <div class="review-card">
+          <p class="review-text"><em>A real escapist page-turner with plenty of plot twists, oodles of drama and a compelling cast. Terrific.</em></p>
+          <p><strong>Nick Crane, author and broadcaster</strong></p>
+        </div>
+</div>
+  <!-- Link to your JavaScript file if needed -->
+  <!-- Additional scripts -->
   <script>
-    // Fetch and insert navbar using JavaScript
+    // Existing script to fetch and insert the navbar
     fetch('navbar.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
+            highlightCurrentPage(); // Call the function to highlight the navbar link here
         })
         .catch(error => console.error('Error fetching navbar:', error));
-  </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+
+    // Function to add 'current-page' class to the current page's navbar link
+    function highlightCurrentPage() {
+        const navLinks = document.querySelectorAll('#navbar a'); // Adjust the selector if needed
+        const currentUrl = window.location.pathname; // Gets the path, e.g., '/about.html'
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentUrl || link.href === window.location.href) {
+                link.classList.add('current-page');
+            }
+        });
+    }
+    </script>
+
+<script>
+  function typeWriter(elementId, text, speed) {
+    let i = 0;
+    document.getElementById(elementId).innerHTML = ""; // Clear existing content
+    function type() {
+      if (i < text.length) {
+        document.getElementById(elementId).innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  }
+
+  // Extracting the text from the element to maintain HTML structure
+  const headingText = "LITTLE BLUE BOAT";
+  const headingId = "typewriter-heading"; // Ensure this ID matches the one in your HTML
+  typeWriter(headingId, headingText, 150); // Adjust speed as needed
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
