@@ -124,3 +124,8 @@ nav.navbar {
   border-top: 2px solid #333;
   margin: 20px 0;
 }
+
+i.fa {
+  padding: 10px; /* Adds space around the icons */
+  color: blue; /* Sets the icon color to blue */
+}

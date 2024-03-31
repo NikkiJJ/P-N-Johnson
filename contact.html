@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/90b1f038b7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +14,31 @@
 </head>
 <body>
   <div id="navbar"></div>
-  <!-- modify this form HTML and place wherever you want your form -->
-<form
-action="https://formspree.io/f/xkndqqdn"
-method="POST"
->
-<label>
-  Your email:
-  <input type="email" name="email">
-</label>
-<label>
-  Your message:
-  <textarea name="message"></textarea>
-</label>
-<!-- your other form fields go here -->
-<button type="submit">Send</button>
-</form>
+    <div class="page-content">
+      <h3 class="heading">GENERAL ENQUIRES</h3>
+        <p>Find me on social media or use the form below to get in touch.</p>
+          <div>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <form
+          action="https://formspree.io/f/xkndqqdn"
+          method="POST"
+          >
+          <label>
+            Your email:
+            <input type="email" name="email">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+          </form>
+
+    </div>
 
   <script>
     // Existing script to fetch and insert the navbar
