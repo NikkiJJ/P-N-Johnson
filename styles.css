@@ -40,13 +40,26 @@ nav.navbar {
 }
 .heading {
   padding: 10px;
-  font-weight: 200;
+  font-weight: bolder;
   font-family: "Segoe UI";
+  position: relative; /* Needed to position the pseudo-element */
+  display: inline-block; /* Ensures the underline fits the text width */
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Thickness of the underline */
+  background-image: linear-gradient(to right, white, #59B4C3, white); /* Gradient color */
+  border-radius: 2px; /* Optional: adds rounded corners to the underline */
 }
 
 .paragraph {
-  font-weight: 300;
   font-family: "Segoe UI";
+  text-shadow: 1px 1px 2px rgba(181, 179, 179, 0.3);
 }
 
 .about-container {
