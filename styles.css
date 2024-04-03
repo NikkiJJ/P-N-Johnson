@@ -10,9 +10,9 @@ nav.navbar {
   /* background-color: rgb(82, 150, 244) !important; */
 }
 
-
 .page-content {
-  width: 100%;
+  width: calc(100% - 20%);
+  margin: 0 8%; /* 10% margin on left and right */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -22,6 +22,7 @@ nav.navbar {
   padding-bottom: 20px;
 }
 
+
 .more-link {
   text-decoration: none;
   background-color: #59B4C3;
@@ -29,6 +30,12 @@ nav.navbar {
   font-weight: bold;
   padding: 10px 15px 10px 15px;
   border-radius: 5px;
+  margin: 20px;
+}
+
+#spacing {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .current-page {
@@ -39,11 +46,13 @@ nav.navbar {
 
 }
 .heading {
-  padding: 10px;
+  padding: 50px 30px 20px 30px;
   font-weight: bolder;
   font-family: "Segoe UI";
   position: relative; /* Needed to position the pseudo-element */
   display: inline-block; /* Ensures the underline fits the text width */
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .heading::after {
@@ -64,13 +73,44 @@ nav.navbar {
 
 .about-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.about-container img {
+  width: 90%; /* Adjust as needed */
+  max-width: 700px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 9px rgba(147, 147, 147, 0.2);
+}
+
+.book-container {
+  display: flex;
   padding: 20px 10px 0px 40px;
 }
 
-.about-phil {
+.about-book {
   padding: 0px 60px 60px 60px;
   line-height: 1.9;
   text-shadow: 1px 1px 2px rgba(181, 179, 179, 0.3);
+}
+
+
+.about-phil {
+  width: 100%; /* Adjust as needed */
+  max-width: 700px; /* Limit maximum width */
+  font-family: "Segoe UI";
+  line-height: 1.9;
+  text-shadow: 1px 1px 2px rgba(181, 179, 179, 0.3);
+  text-align: center; /* Center-align paragraphs */
+  padding: 40px 10px;
+}
+
+#published-by {
+  padding-top: 70px;
+  font-size: smaller;
 }
 
 @keyframes pop-in {
@@ -101,7 +141,7 @@ nav.navbar {
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
-  width: 60%;
+  width: 70%;
   height: 100%;
   text-align: center;
 }
