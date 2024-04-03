@@ -239,6 +239,10 @@ nav.navbar {
 
 /* Media queries for smaller screens */
 @media only screen and (max-width: 768px) {
+  .nav-sig {
+    padding-left: 5px;
+  }
+
   .book-container {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center elements horizontally */
@@ -275,5 +279,17 @@ nav.navbar {
   .about-book {
     max-width: 800px; /* Limit maximum width */
     padding: 0 100px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row !important; /* Ensure the links are displayed horizontally */
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 10px;
   }
 }
