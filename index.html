@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mr+Dafoe&display=swap" rel="stylesheet">
-    <!-- Additional CSS or meta tags -->
+
 </head>
 <body>
   <div id="navbar"></div>
@@ -21,22 +21,22 @@
            <P class="paragraph" id="spacing"><em>“I bloody loved this, the action starts straight away and just doesn’t stop!"</em> - Patrice Gotting (PRDG Reads)</P>
            <a class="more-link" href="book3.html">Find out more</a>
     </div>
-    <!-- Your page content goes here -->
+
 
     <script>
-      // Existing script to fetch and insert the navbar
+
       fetch('navbar.html')
           .then(response => response.text())
           .then(html => {
               document.getElementById('navbar').innerHTML = html;
-              highlightCurrentPage(); // Call the function to highlight the navbar link here
+              highlightCurrentPage();
           })
           .catch(error => console.error('Error fetching navbar:', error));
 
-      // Function to add 'current-page' class to the current page's navbar link
+
       function highlightCurrentPage() {
-          const navLinks = document.querySelectorAll('#navbar a'); // Adjust the selector if needed
-          const currentUrl = window.location.pathname; // Gets the path, e.g., '/about.html'
+          const navLinks = document.querySelectorAll('#navbar a');
+          const currentUrl = window.location.pathname;
 
           navLinks.forEach(link => {
               if (link.getAttribute('href') === currentUrl || link.href === window.location.href) {
@@ -49,7 +49,7 @@
   <script>
     function typeWriter(elementId, text, speed) {
       let i = 0;
-      document.getElementById(elementId).innerHTML = ""; // Clear existing content
+      document.getElementById(elementId).innerHTML = "";
       function type() {
         if (i < text.length) {
           document.getElementById(elementId).innerHTML += text.charAt(i);
@@ -60,10 +60,10 @@
       type();
     }
 
-    // Extracting the text from the element to maintain HTML structure
+
     const headingText = "RUN TO THE BLUE - OUT NOW!";
-    const headingId = "typewriter-heading"; // Ensure this ID matches the one in your HTML
-    typeWriter(headingId, headingText, 150); // Adjust speed as needed
+    const headingId = "typewriter-heading";
+    typeWriter(headingId, headingText, 150); 
   </script>
   <script src="https://kit.fontawesome.com/90b1f038b7.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

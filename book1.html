@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mr+Dafoe&display=swap" rel="stylesheet">
-    <!-- Link to your CSS stylesheet if needed -->
-    <!-- Additional meta tags, stylesheets, and scripts -->
+
 </head>
 <body>
   <div id="navbar"></div>
@@ -32,33 +31,32 @@
     </div>
     <a href="https://www.amazon.co.uk/Little-Blue-Boat-Marsh-Mans/dp/1783064862" class="more-link" target="_blank">Get "Little Blue Boat" now</a>
     <div class="separator"></div>
-      <h2 class="heading">Reviews for Killer In The Crowd</h2>
+      <h2 class="heading">Reviews for Little Blue Boat</h2>
         <div class="review-card">
-          <p class="review-text"><em>Utterly compelling. From page to page, the mystery grows ever-deeper. Packed with characters intricately defined. And an ending that comes like a bolt from the blue. Mystery in the music world!</em></p>
+          <p><em>"Utterly compelling. From page to page, the mystery grows ever-deeper. Packed with characters intricately defined. And an ending that comes like a bolt from the blue. Mystery in the music world!"</em></p>
           <p><strong>Steve Harley (Cockney Rebel) - singer, songwriter
           </strong></p>
         </div>
         <div class="review-card">
-          <p class="review-text"><em>A real escapist page-turner with plenty of plot twists, oodles of drama and a compelling cast. Terrific.</em></p>
+          <p><em>"A real escapist page-turner with plenty of plot twists, oodles of drama and a compelling cast. Terrific."</em></p>
           <p><strong>Nick Crane, author and broadcaster</strong></p>
         </div>
 </div>
-  <!-- Link to your JavaScript file if needed -->
-  <!-- Additional scripts -->
+
   <script>
-    // Existing script to fetch and insert the navbar
+
     fetch('navbar.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('navbar').innerHTML = html;
-            highlightCurrentPage(); // Call the function to highlight the navbar link here
+            highlightCurrentPage();
         })
         .catch(error => console.error('Error fetching navbar:', error));
 
-    // Function to add 'current-page' class to the current page's navbar link
+
     function highlightCurrentPage() {
-        const navLinks = document.querySelectorAll('#navbar a'); // Adjust the selector if needed
-        const currentUrl = window.location.pathname; // Gets the path, e.g., '/about.html'
+        const navLinks = document.querySelectorAll('#navbar a');
+        const currentUrl = window.location.pathname;
 
         navLinks.forEach(link => {
             if (link.getAttribute('href') === currentUrl || link.href === window.location.href) {
@@ -71,7 +69,7 @@
 <script>
   function typeWriter(elementId, text, speed) {
     let i = 0;
-    document.getElementById(elementId).innerHTML = ""; // Clear existing content
+    document.getElementById(elementId).innerHTML = "";
     function type() {
       if (i < text.length) {
         document.getElementById(elementId).innerHTML += text.charAt(i);
@@ -82,10 +80,10 @@
     type();
   }
 
-  // Extracting the text from the element to maintain HTML structure
+
   const headingText = "LITTLE BLUE BOAT";
-  const headingId = "typewriter-heading"; // Ensure this ID matches the one in your HTML
-  typeWriter(headingId, headingText, 150); // Adjust speed as needed
+  const headingId = "typewriter-heading";
+  typeWriter(headingId, headingText, 150); 
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>

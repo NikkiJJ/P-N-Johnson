@@ -7,12 +7,11 @@
 
 nav.navbar {
   box-shadow: 0px 0px 10px 9px rgba(110, 109, 109, 0.2);
-  /* background-color: rgb(82, 150, 244) !important; */
 }
 
 .page-content {
   width: calc(100% - 20%);
-  margin: 0 8%; /* 10% margin on left and right */
+  margin: 0 8%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -34,8 +33,8 @@ nav.navbar {
 }
 
 .more-link:hover {
-  text-decoration: none; /* Remove underline on hover */
-  color: inherit; /* Use the inherited text color */
+  text-decoration: none;
+  color: inherit;
 }
 
 #spacing {
@@ -45,17 +44,17 @@ nav.navbar {
 
 .current-page {
   position: relative;
-  padding-bottom: 3px; /* Adjusts the space between the text and the underline */
-  border-bottom: 2px solid #59B4C3 ; /* Creates the underline. Adjust the color and thickness as needed */
-  text-decoration: none; /* Removes the default text underline if it's an <a> tag */
+  padding-bottom: 3px;
+  border-bottom: 2px solid #59B4C3 ;
+  text-decoration: none;
 
 }
 .heading {
   padding: 50px 30px 20px 30px;
   font-weight: bolder;
   font-family: "Segoe UI";
-  position: relative; /* Needed to position the pseudo-element */
-  display: inline-block; /* Ensures the underline fits the text width */
+  position: relative;
+  display: inline-block;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -66,9 +65,9 @@ nav.navbar {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px; /* Thickness of the underline */
-  background-image: linear-gradient(to right, white, #59B4C3, white); /* Gradient color */
-  border-radius: 2px; /* Optional: adds rounded corners to the underline */
+  height: 3px;
+  background-image: linear-gradient(to right, white, #59B4C3, white);
+  border-radius: 2px;
 }
 
 .paragraph {
@@ -84,9 +83,9 @@ nav.navbar {
 }
 
 .about-container img {
-  width: 90%; /* Adjust as needed */
-  max-width: 700px; /* Limit maximum width */
-  height: auto; /* Maintain aspect ratio */
+  width: 90%;
+  max-width: 700px;
+  height: auto;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 9px rgba(147, 147, 147, 0.2);
 }
@@ -104,12 +103,12 @@ nav.navbar {
 
 
 .about-phil {
-  width: 100%; /* Adjust as needed */
-  max-width: 700px; /* Limit maximum width */
+  width: 100%;
+  max-width: 700px;
   font-family: "Segoe UI";
   line-height: 1.9;
   text-shadow: 1px 1px 2px rgba(181, 179, 179, 0.3);
-  text-align: center; /* Center-align paragraphs */
+  text-align: center;
   padding: 40px 10px;
 }
 
@@ -151,26 +150,12 @@ nav.navbar {
   text-align: center;
 }
 
-.review-text::before {
-  content: "“"; /* This is a quotation mark */
-  font-size: 40px; /* Makes it big */
-  color: #F8F6E3; /* Sets the color */
-}
-
-.review-text::after {
-  content: "”"; /* Closing quotation mark */
-  font-size: 40px; /* Makes it big */
-  color: #F8F6E3; /* Sets the color */
-  /* Repeat styling as needed, adjusting for the end mark if necessary */
-}
-
 
 .separator {
   border-top: 2px solid #333;
   margin: 20px 0;
 }
 
-/* Additional CSS to style the social icons */
 .social-icons {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -179,36 +164,35 @@ nav.navbar {
 .social-icons i {
   font-size: larger;
   padding: 15px;
-  margin-right: 10px; /* Adjust the margin between icons as needed */
-  color: #59B4C3; /* Sets the icon color to blue */
+  margin-right: 10px;
+  color: #59B4C3;
 }
 
-/* Additional CSS to style the form */
 .contact-form {
-  max-width: 400px; /* Adjust the maximum width of the form */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .form-input {
-  width: 100%; /* Set the input fields to occupy full width */
-  padding: 10px; /* Add padding to the input fields */
-  margin-bottom: 15px; /* Add margin between input fields */
-  border: 1px solid #ccc; /* Add border to the input fields */
-  border-radius: 5px; /* Add border-radius to the input fields */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .submit-btn {
-  width: 100%; /* Set the button width to occupy full width */
-  padding: 10px; /* Add padding to the button */
-  background-color: #59B4C3; /* Change button background color */
-  color: #fff; /* Change button text color */
-  border: none; /* Remove button border */
-  border-radius: 5px; /* Add border-radius to the button */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  width: 100%;
+  padding: 10px;
+  background-color: #59B4C3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .submit-btn:hover {
-  background-color: #448e9c; /* Change button background color on hover */
+  background-color: #448e9c;
 }
 
 .book-container {
@@ -235,33 +219,30 @@ nav.navbar {
 
 
 
-
-
-/* Media queries for smaller screens */
 @media only screen and (max-width: 768px) {
   .nav-sig {
     padding-left: 5px;
   }
 
   .book-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements horizontally */
-    padding: 20px; /* Add padding around the whole container */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
   .about-book {
-    padding: 40px 10px 10px 10px; /* Add padding around the text */
-    text-align: center; /* Center-align the text */
+    padding: 40px 10px 10px 10px;
+    text-align: center;
   }
 
   .review-card {
-    width: 90%; /* Adjust width as needed */
-    max-width: none; /* Remove maximum width */
-    margin: 20px auto; /* Center the card */
+    width: 90%;
+    max-width: none;
+    margin: 20px auto;
   }
 
   .heading {
-    font-size: 20px; /* Adjust as needed */
+    font-size: 20px;
   }
 
   .paragraph {
@@ -271,25 +252,31 @@ nav.navbar {
 
 @media screen and (min-width: 1024px) {
   .book-container {
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 40px 0; /* Adjust padding */
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
   }
 
   .about-book {
-    max-width: 800px; /* Limit maximum width */
-    padding: 0 100px; /* Adjust padding */
+    max-width: 800px;
+    padding: 0 100px;
   }
 }
 
 @media (max-width: 992px) {
   .navbar-nav {
     display: flex;
-    flex-direction: row !important; /* Ensure the links are displayed horizontally */
+    flex-direction: row !important;
     justify-content: center;
   }
 
   .navbar-nav .nav-item {
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .review-card {
+    line-height: 1.6; 
   }
 }
