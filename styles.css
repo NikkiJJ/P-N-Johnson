@@ -33,6 +33,11 @@ nav.navbar {
   margin: 20px;
 }
 
+.more-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: inherit; /* Use the inherited text color */
+}
+
 #spacing {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -205,12 +210,70 @@ nav.navbar {
 .submit-btn:hover {
   background-color: #448e9c; /* Change button background color on hover */
 }
-/* 
-.buy-link {
-  margin-top: 20px;
-  text-decoration: none;
-  color: #59B4C3;
-  font-family: "Segoe UI";
-  font-size: 30px;
-  font-weight: bolder;
-} */
+
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  height: auto;
+}
+
+.about-book {
+  max-width: 600px;
+  padding: 0 100px;
+  line-height: 1.9;
+  text-shadow: 1px 1px 2px rgba(181, 179, 179, 0.3);
+}
+
+.book-image {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 5px !important;
+  box-shadow: 0px 0px 10px 9px rgba(147, 147, 147, 0.2) !important;
+}
+
+
+
+
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+  .book-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    padding: 20px; /* Add padding around the whole container */
+  }
+
+  .about-book {
+    padding: 40px 10px 10px 10px; /* Add padding around the text */
+    text-align: center; /* Center-align the text */
+  }
+
+  .review-card {
+    width: 90%; /* Adjust width as needed */
+    max-width: none; /* Remove maximum width */
+    margin: 20px auto; /* Center the card */
+  }
+
+  .heading {
+    font-size: 20px; /* Adjust as needed */
+  }
+
+  .paragraph {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .book-container {
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 40px 0; /* Adjust padding */
+  }
+
+  .about-book {
+    max-width: 800px; /* Limit maximum width */
+    padding: 0 100px; /* Adjust padding */
+  }
+}
